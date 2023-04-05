@@ -1,0 +1,3804 @@
+/*
+Theme Name: iManifest
+Theme URI: https://imanifest.netlify.app
+Author: BdCalling IT
+Author URI: https://wordpress.org/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic Landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 6.0
+Tested up to: 5.4
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: iManifest
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+Front End Developed By Mahadi hassan
+*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Responsive CSS index ====
+
+--> CSS Core Varriable Start
+--> Landing     - Home
+--> Landing     - Pricing
+--> Landing     - Checkout
+--> Landing     - Coming Soon
+--> Landing     - Login
+--> Landing     - Registration
+--> Landing     - 404 Page
+--> Dashboard   - Home
+--> Dashboard   - All Books
+--> Dashboard   - Audio
+--> Dashboard   - Videos
+--> Dashboard   - Courses
+--> Dashboard   - Insights
+--> Dashboard   - Guides
+--> Dashboard   - Forum Main
+--> Dashboard   - Forum Details
+--> Dashboard   - Write Forum
+--> Dashboard   - My Journals 
+--> Dashboard   - Journals Details
+--> Dashboard   - Write journal
+--> Dashboard   - User Profile (Formaly Known as My Account)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media only screen and (min-width: 320px) and (max-width: 360px) {
+
+  /* === Dashboard Breadcrumb :: Start === */
+  .dash-breadcrumb-tree {
+    padding: 35px 0px;
+  }
+
+  /* === Dashboard Breadcrumb :: End === */
+
+
+  /* === Landing  - Home :: Start === */
+
+  /* Header :: Start */
+  .header-row {
+    padding: 15px 25px;
+  }
+
+  .header-container {
+    width: var(--s-m-container);
+    margin: 0 auto;
+  }
+
+  .video-section-container {
+    width: var(--s-m-container) !important;
+  }
+
+  .video-section-wrapper::before,
+  .video-section-wrapper::after {
+    display: none;
+  }
+
+  .video-section-row {
+    padding: 0px 20px;
+  }
+
+  .video-section-col iframe {
+    height: 200px;
+  }
+
+  .footer-row {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .footer-col {
+    width: 100%;
+    padding: 0px 40px;
+  }
+
+  .footer-link ul li {
+    display: block;
+    margin: 10px 5px;
+  }
+
+  .footer-link ul {
+    margin-top: 27px !important;
+  }
+
+  /* Footer :: Start */
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  /* === Landing  - Home :: End === */
+
+  /* === Landing  - About :: Start === */
+  .section-slide-row {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide-col {
+    width: 100%;
+    padding: 25px 18px;
+    height: 100%;
+  }
+
+  .slide-content.about-desc p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  /* === Landing  - About :: End === */
+
+  /* === Landing  - Pricing :: Start === */
+
+  #pricing {
+    margin-top: 100px;
+  }
+
+  .lb-container {
+    width: var(--s-m-container);
+  }
+
+  .lb-wrapper {
+    padding: 150px 20px 30px;
+  }
+
+  .section-wrapper::before,
+  .section-wrapper::after {
+    display: none !important;
+  }
+
+  .section-slide {
+    width: var(--s-m-container);
+  }
+
+  .section-wrapper {
+    padding: 30px 0px;
+  }
+
+  .pricing-row {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .pricing-col {
+    width: 100% !important;
+  }
+
+  .pricing-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-100);
+    transition: var(--global-transation);
+    padding: 20px;
+    border-radius: var(--global-border-radius);
+  }
+
+  .pricing-card-header {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px 0px;
+  }
+
+  .pricing-card-header::after {
+    border-bottom: 1px solid #e6e9ed;
+    border-right: 0;
+  }
+
+  .pricing-card-header p {
+    font-size: 36px;
+  }
+
+  .pricing-card-services {
+    width: 100%;
+  }
+
+  .offer-tag {
+    z-index: 1;
+  }
+
+  /* == Landing  - Pricing :: End == */
+
+  /* === Landing - Checkout :: Start === */
+  .checkout-body {
+    height: 100%;
+  }
+
+  .checkout-wrapper {
+    flex-direction: column-reverse;
+    padding: 15px;
+  }
+
+  .checkout-billing-form.shadow-sm {
+    margin-bottom: 30px;
+  }
+
+  .checkbox-head {
+    margin-left: 0;
+    padding: 0px 15px;
+  }
+
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-billing-form,
+  .checkout-details-section {
+    width: 100%;
+  }
+
+  /* === Landing - Checkout :: End === */
+
+  /* ==== Landing - Policy :: Start ==== */
+  .policy-page-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .policy-page-container {
+    width: var(--s-m-container);
+  }
+
+  .page-content {
+    padding: 20px;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  /* ==== Landing - Policy :: End ==== */
+
+  /* === Dashboard - Home :: Start === */
+  .browse-category {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    padding: 0px 10px;
+  }
+
+  .brws-books-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 55px;
+    grid-row-gap: 0px;
+  }
+
+  /* === Dashboard - Home :: End === */
+
+  /* ==== Dashbaord - Books :: Start ==== */
+  .books-collection {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .books-collection .book {
+    width: 100%;
+  }
+
+  /* ==== Dashbaord - Books :: End ==== */
+
+  /* ==== Dashbaord - Journal :: Start ==== */
+  /* Journal Detail :: Start */
+  .journal-details {
+    padding: 20px 0px 20px 0px;
+    background-color: #fafcff;
+  }
+
+  .journal-details-section p {
+    text-align: justify;
+  }
+
+  /* Journal Detail :: End */
+  /* .journals page start*/
+  .journals .journals-collection {
+    grid-template-columns: auto;
+  }
+
+  /* .journals page end*/
+
+  /* journals details page start  */
+  .journal-details-section {
+    height: 100%;
+  }
+
+  .journal-details-section h2,
+  .journal-details-section h5 {
+    font-size: 18px;
+  }
+
+  .journal-btn li a {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+
+  .write-journal {
+    padding: 27px 20px 70px 20px;
+  }
+
+  .write-journal button {
+    font-size: 9px;
+    padding: 5px 8px;
+  }
+
+  .write-journal form {
+    padding: 20px 20px;
+    background-color: #fff;
+    width: 97%;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+
+  /* ==== Dashbaord - Journal :: End ==== */
+
+  /* === Dashboard - Guides :: Start */
+  .guides-section {
+    padding: 0px;
+  }
+
+  .guide-card {
+    width: 100%;
+    margin: 10px 15px;
+  }
+
+  /* === Dashboard - Guides :: End */
+
+  /* === Dashboard - Guides :: Start */
+  .guides-section {
+    padding: 20px 20px;
+  }
+
+  .guide-card {
+    width: 100%;
+    margin: 10px 15px;
+  }
+
+  /* guides page end  */
+  /* guides details page end  */
+  .guide-details-section {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .guide-details-title h2 {
+    font-size: 18px;
+  }
+
+  .guide-details-sitebar {
+    width: 100%;
+  }
+
+  .guide-details .d-flex {
+    flex-direction: column;
+  }
+
+  .guide-details-sitebar img {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .guide-details-sitebar h6 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .guide-details-sitebar p {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  /* guide-details end  */
+
+  /* === Dashboard - Guides :: End */
+
+
+  /* === Dashboard - Write Forum :: Start */
+
+  .forum-breadcrumb-row .write-forum-btns a {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .forum-breadcrumb-col {
+    font-size: 14px;
+  }
+
+  .forum-breadcrumb-col h3 {
+    font-size: 18px;
+}
+
+  .dashboard-write-forum .dash-main-right main.dashboard-content-wrapper {
+    padding: 10px !important;
+  }
+
+  /* === Dashboard - Write Forum :: End */
+
+  .forum-details .forum-details-post .forum-info {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .forum-details .forum-details-post .forum-info div i {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+
+  .dash-header-col-left h3 {
+    font-size: 18px;
+  }
+
+  .write-journal {
+    padding: 10px;
+  }
+
+  .form-btn ul li button {
+    padding: 10px 15px;
+    border: 0;
+  }
+
+  .write-journal-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  .write-journal-title p {
+    font-size: 12px;
+  }
+
+  /* home page start  */
+  .home-bg-top {
+    height: 477px;
+  }
+
+  .home-section {
+    width: 317px;
+  }
+
+  .home-video-container {
+    margin-top: 261px;
+  }
+
+  .home-nav button {
+    padding: 7px 35px;
+    font-size: 14px;
+  }
+
+  /* home page end  */
+
+  /* login page  */
+  .login-form form {
+    padding: 18px !important;
+  }
+
+  .login-form form {
+    top: 455px;
+    width: 272px;
+  }
+
+  .login-bg img {
+    width: 28%;
+  }
+
+  /* log in end  */
+  /* book page start  */
+  .books-collection {
+    grid-template-columns: auto;
+  }
+
+  /* book page end  */
+  .books-collection {
+    grid-template-columns: auto;
+  }
+
+  /* book page end  */
+
+  /* guides page start  */
+  .guides-collection {
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+
+  /* guides page end  */
+
+  /* video page start */
+  /* and audio page start */
+
+  /* === Dashbaord - Course - Start === */
+  .courses-wrapper {
+    background: #fff;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .courses-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .courses-video,
+  .courses-audio {
+    padding: 16px;
+  }
+
+  .courses-video-section,
+  .courses-audio-section {
+    flex-direction: column-reverse;
+  }
+
+  .courses-video-modul,
+  .courses-audio-modul {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .courses-video .video,
+  .courses-audio .audio {
+    width: 100%;
+  }
+
+  /* === Dashbaord - Course - End === */
+
+
+  /* === Dashbaord - Insights - Start === */
+
+  /* insights cursor section  */
+  .insights-section {
+    flex-direction: column;
+  }
+
+  .insights-book-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .insights-course-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+
+  .insights-book-wrapper {
+    overflow-y: scroll;
+    height: 650px;
+    padding: 10px 10px;
+    margin: 20px 10px;
+  }
+
+  .insights-book-section .insights-book-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px 20px 16px;
+    border-radius: 4px;
+    box-shadow: 0px 3.56554px 35.6554px rgba(0, 0, 0, 0.07);
+  }
+
+  .insights-book-card div:nth-child(1) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .insights-book-card div:nth-child(1) img {
+    margin: 0;
+  }
+
+  .insights-book-card div:nth-child(1) div {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .insights-course-section .insights-course {
+    grid-template-columns: 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 10px;
+    margin: 20px 10px;
+    height: 615px;
+    overflow-y: scroll;
+  }
+
+  /* === Dashbaord - Insights - End === */
+
+  /* dashbord page  */
+  .dashbord-section {
+    flex-direction: column;
+  }
+
+  .dashobrd-book-section {
+    width: 100%;
+  }
+
+  .dashboard-course-section {
+    width: 100%;
+  }
+
+  /* forum mane page start */
+  .forum-main {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .forum-post-wrapper {
+    padding: 10px;
+  }
+
+  .forum-post-info {
+    flex-direction: column;
+  }
+
+  .forum-post-card p {
+    font-size: 14px;
+  }
+
+  .forum-post-info div {
+    margin: 0;
+  }
+
+  .forum-publisher-info h5 {
+    font-size: 14px;
+  }
+
+  .forum-publisher-info p {
+    font-size: 11px;
+  }
+
+  .forum-main .forum-main-all-forum {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-main-all-forum-item {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .forum-main .forum-main-rightbar {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* forum-details page start  */
+
+  .forum-details .forum-details-section {
+    flex-direction: column;
+  }
+
+  .forum-details .forum-details-post {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .forum-details .forum-details-rightbar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .forum-details {
+    padding: 18px 22px;
+  }
+
+  .forum-details .forum-details-title h2 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-title p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post {
+    padding: 20px;
+  }
+
+  .forum-details .forum-details-post h5 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile {
+    margin: 12px 0;
+  }
+
+  .forum-details .forum-details-post .forum-info p {
+    font-size: 10px;
+  }
+
+  .forum-details .forum-details-post .forum-info i {
+    margin: 0 5px 0 9px;
+  }
+
+  .forum-details .forum-details-post .forum-description {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .feedback {
+    padding: 8px 16px;
+  }
+
+  .forum-details .forum-details-post .feedback i {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment {
+    padding: 20px 21px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment p {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment .comment-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section {
+    padding: 20px 18px 14px 20px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea {
+    height: 100px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section button {
+    margin-right: 14px;
+  }
+
+  /* forum-details-rightbar */
+  .forum-details .forum-details-rightbar {
+    padding: 16px;
+  }
+
+  .forum-details .forum-details-rightbar hr {
+    margin: 25px 0 22px 0;
+  }
+
+  .forum-details-rightbar .popular-forum-post h2,
+  .forum-details-rightbar .related-forum-post h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card {
+    margin-top: 22px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card h6,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card h6 {
+    font-size: 14px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card p,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card p {
+    font-size: 10px;
+  }
+
+  .forum-details-rightbar .trending-topics h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .trending-topics p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 479px) {
+  /* == Landing  - Home :: Start == */
+
+  /* Header :: Start */
+  .header-row {
+    padding: 15px 25px;
+  }
+
+  .header-container {
+    width: var(--s-m-container);
+    margin: 0 auto;
+  }
+
+  .video-section-container {
+    width: var(--s-m-container) !important;
+  }
+
+  .video-section-wrapper::before,
+  .video-section-wrapper::after {
+    display: none;
+  }
+
+  .video-section-row {
+    padding: 0px 20px;
+  }
+
+  .video-section-col iframe {
+    height: 200px;
+  }
+
+  .video-section-col.promo-video-col #player {
+    box-shadow: 0px 0 35.6554px 25px rgba(0, 0, 0, 0.07);
+    border-radius: var(--global-border-radius);
+  }
+
+  .footer-row {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .footer-col {
+    width: 100%;
+    padding: 0px 40px;
+  }
+
+  .footer-link ul li {
+    display: block;
+    margin: 10px 5px;
+  }
+
+  .footer-link ul {
+    margin-top: 27px !important;
+  }
+
+  /* Footer :: Start */
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  /* == Landing  - Home :: End == */
+
+  /* == Landing  - About :: Start == */
+  .section-slide-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide-col {
+    width: 100%;
+    padding: 75px 18px;
+    height: 100%;
+  }
+
+  /* == Landing  - About :: End == */
+
+  /* == Landing  - Pricing :: Start == */
+
+  #pricing {
+    margin-top: 100px;
+  }
+
+  .lb-container {
+    width: var(--s-m-container);
+  }
+
+  .lb-wrapper {
+    padding: 150px 20px 30px;
+  }
+
+  .section-wrapper::before,
+  .section-wrapper::after {
+    display: none !important;
+  }
+
+  .section-slide {
+    width: var(--s-m-container);
+  }
+
+  .section-wrapper {
+    padding: 30px 0px;
+  }
+
+  .pricing-row {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .pricing-col {
+    width: 100% !important;
+  }
+
+  .pricing-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-100);
+    transition: var(--global-transation);
+    padding: 20px;
+    border-radius: var(--global-border-radius);
+  }
+
+  .pricing-card-header {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px 0px;
+  }
+
+  .pricing-card-header::after {
+    border-bottom: 1px solid #e6e9ed;
+    border-right: 0;
+  }
+
+  .pricing-card-services {
+    width: 100%;
+  }
+
+  .offer-tag {
+    z-index: 1;
+  }
+
+  /* == Landing  - Pricing :: End == */
+
+  /* === Landing - Checkout :: Start === */
+  .checkout-body {
+    height: 100%;
+  }
+
+  .checkout-wrapper {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .checkout-billing-form.shadow-sm {
+    margin-bottom: 30px;
+  }
+
+  .checkbox-head {
+    margin-left: 0;
+    padding: 0px 15px;
+  }
+
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-billing-form,
+  .checkout-details-section {
+    width: 100%;
+  }
+
+  /* === Landing - Checkout :: End === */
+
+  /* ==== Landing - Policy :: Start ==== */
+  .policy-page-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .policy-page-container {
+    width: var(--s-m-container);
+  }
+
+  .page-content {
+    padding: 20px;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  /* ==== Landing - Policy :: End ==== */
+
+  /* === Dashboard - Journal Details :: Start */
+  .journals {
+    padding: 20px 20px;
+  }
+
+  .dash-breadcrumb-tree {
+    padding: 35px 25px;
+  }
+
+  .journal-details {
+    padding: 24px 25px 52px 25px;
+  }
+
+  .journal-details-section p {
+    text-align: justify;
+  }
+
+  .journal-btn li a {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+
+  .write-journal {
+    padding: 27px 20px 70px 20px;
+  }
+
+  .write-journal button {
+    font-size: 11px;
+    padding: 5px 11px;
+  }
+
+  .journals button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .journals button i {
+    margin-right: 5px;
+  }
+
+  /* === Dashboard - Journal Details :: End */
+
+
+  /* === Dashboard - Guides :: Start */
+  .guides-section {
+    padding: 20px 20px;
+  }
+
+  .guide-card {
+    width: 100%;
+    margin: 10px 15px;
+  }
+
+  /* guides page end  */
+  /* guides details page end  */
+  .guide-details-section {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .guide-details-title h2 {
+    font-size: 18px;
+  }
+
+  .guide-details-sitebar {
+    width: 100%;
+  }
+
+  .guide-details .d-flex {
+    flex-direction: column;
+  }
+
+  .guide-details-sitebar img {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .guide-details-sitebar h6 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .guide-details-sitebar p {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  /* guide-details end  */
+
+  /* === Dashboard - Guides :: End */
+
+
+  /* === Dashbaord - Insights - Start === */
+
+  /* insights cursor section  */
+  .insights-section {
+    flex-direction: column;
+  }
+
+  .insights-book-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .insights-course-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+
+  .insights-book-wrapper {
+    overflow-y: scroll;
+    height: 650px;
+    padding: 10px 10px;
+    margin: 20px 10px;
+  }
+
+  .insights-book-section .insights-book-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px 20px 16px;
+    border-radius: 4px;
+    box-shadow: 0px 3.56554px 35.6554px rgba(0, 0, 0, 0.07);
+  }
+
+  .insights-book-card div:nth-child(1) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .insights-book-card div:nth-child(1) img {
+    margin: 0;
+  }
+
+  .insights-book-card div:nth-child(1) div {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .insights-course-section .insights-course {
+    grid-template-columns: 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 10px;
+    margin: 20px 10px;
+    height: 615px;
+    overflow-y: scroll;
+  }
+
+  /* === Dashbaord - Insights - End === */
+
+
+  /* === Dashboard - Forum :: Start */
+  .forum-details .forum-details-post .forum-info {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .forum-details .forum-details-post .forum-info div i {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+
+  .tag-slide-btn {
+    padding: 5px 5px;
+    border: 0.5px solid #042954;
+    border-radius: 4px;
+  }
+
+  ul.forum-tags li a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  ul.forum-tags.m-0.p-0.slick-initialized.slick-slider li.forum-tag-item.slick-slide {
+    margin: 0px 5px;
+  }
+
+  .forum-post-wrapper {
+    padding: 30px 25px 0px 25px;
+  }
+
+  .forum-post-info {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .forum-post-info div {
+    margin: 0px;
+  }
+
+  .forum-publisher-info h5 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .forum-publisher-info p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .forum-post-card p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  /* forum mane page start */
+  .forum-main {
+    flex-direction: column;
+  }
+
+  .forum-main .forum-main-all-forum {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-main-all-forum-item {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .forum-main .forum-main-rightbar {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* forum-details page start  */
+
+  .forum-details .forum-details-section {
+    flex-direction: column;
+  }
+
+  .forum-details .forum-details-post {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .forum-details .forum-details-rightbar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .forum-details {
+    padding: 18px 22px;
+  }
+
+  .forum-details .forum-details-title h2 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-title p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post {
+    padding: 20px;
+  }
+
+  .forum-details .forum-details-post h5 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile {
+    margin: 12px 0;
+  }
+
+  .forum-details .forum-details-post .forum-info p {
+    font-size: 10px;
+  }
+
+  .forum-details .forum-details-post .forum-info i {
+    margin: 0 5px 0 9px;
+  }
+
+  .forum-details .forum-details-post .forum-description {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .feedback {
+    padding: 8px 16px;
+  }
+
+  .forum-details .forum-details-post .feedback i {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment {
+    padding: 20px 21px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment p {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment .comment-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section {
+    padding: 20px 18px 14px 20px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea {
+    height: 100px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section button {
+    margin-right: 14px;
+  }
+
+  /* forum-details-rightbar */
+  .forum-details .forum-details-rightbar {
+    padding: 16px;
+  }
+
+  .forum-details .forum-details-rightbar hr {
+    margin: 25px 0 22px 0;
+  }
+
+  .forum-details-rightbar .popular-forum-post h2,
+  .forum-details-rightbar .related-forum-post h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card {
+    margin-top: 22px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card h6,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card h6 {
+    font-size: 14px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card p,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card p {
+    font-size: 10px;
+  }
+
+  .forum-details-rightbar .trending-topics h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .trending-topics p {
+    font-size: 16px;
+  }
+
+  /* === Dashboard - Forum :: End */
+
+
+  /* === Dashboard - Insights :: Start */
+  .insights-book-wrapper {
+    overflow-y: scroll;
+    height: 650px;
+    padding: 10px 10px;
+    margin: 20px 10px;
+  }
+
+  /* === Dashboard - Insights :: End */
+
+  .books-collection .book {
+    width: 100%;
+    margin: 0px 25px;
+    padding: 0px 15px;
+  }
+
+  .books-section {
+    margin: 0;
+    padding: 10px;
+  }
+
+  main.dashboard-content-wrapper {
+    padding: 0px !important;
+  }
+
+  .brws-books-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+  }
+
+  .my-dashboard {
+    padding: 25px 0px 20px 0px;
+    background-color: #fafcff;
+  }
+
+  .book-card-info h1 {
+    font-size: 12px;
+  }
+
+  .book-card-info p {
+    font-size: 12px;
+  }
+
+  .course-card-info h6 {
+    font-size: 12px;
+  }
+
+
+  .browse-category {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    padding: 15px;
+  }
+
+
+  .courses-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .home-section {
+    width: 100% !important;
+    padding: 20px;
+    margin: 45px auto;
+  }
+
+  /* home page start  */
+  .home-bg-top {
+    height: 477px;
+  }
+
+  .home-section {
+    width: 344px;
+  }
+
+  .home-video-container {
+    margin-top: 261px;
+  }
+
+  .home-nav button {
+    padding: 7px 35px;
+    font-size: 14px;
+  }
+
+  /* home page end  */
+
+  /* login page start  */
+  .login-form form {
+    top: 515px;
+    width: 320px;
+  }
+
+  .login-bg img {
+    width: 28%;
+  }
+
+  .login-form form {
+    padding: 18px !important;
+  }
+
+  .journals .journals-collection {
+    grid-template-columns: auto;
+  }
+
+  .journals .journals-collection h6 {
+    font-size: 11px;
+  }
+
+  .journal-details-section {
+    height: 100%;
+  }
+
+  .journal-details-section h2,
+  .journal-details-section h5 {
+    font-size: 18px;
+  }
+
+  /* video page start */
+  /* and audio page start */
+  .courses-video,
+  .courses-audio {
+    padding: 16px;
+  }
+
+  .courses-video-section,
+  .courses-audio-section {
+    flex-direction: column-reverse;
+  }
+
+  .courses-video-modul,
+  .courses-audio-modul {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .courses-video .video,
+  .courses-audio .audio {
+    width: 100%;
+  }
+
+
+
+  /* dashbord page  */
+  .dashbord-section {
+    flex-direction: column;
+  }
+
+  .dashobrd-book-section {
+    width: 100%;
+  }
+
+  .dashboard-course-section {
+    width: 100%;
+  }
+
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  /* === Dashboard - Home :: Start === */
+  .header-container {
+    width: var(--s-m-container);
+  }
+
+  .header-row {
+    padding: 15px 35px;
+  }
+
+  .video-section-container {
+    width: var(--s-m-container);
+  }
+
+  .video-section-wrapper::before,
+  .video-section-wrapper::after {
+    display: none;
+  }
+
+  .video-section-col {
+    padding: 30px;
+  }
+
+  .video-section-col iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px !important;
+  }
+
+  #footer {
+    padding: 0;
+  }
+
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  .footer-row {
+    padding: 10px;
+  }
+
+  .footer-link ul li {
+    margin: 0 !important;
+  }
+
+  .footer-link ul li a {
+    font-size: 50%;
+  }
+
+  /* === Dashboard - Home :: End === */
+
+  /* === Landing - About :: Start === */
+  .section-slide-row {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .slide-col {
+    padding: 30px;
+  }
+
+  .slide-content.about-desc {
+    text-align: justify;
+  }
+
+  /* === Landing - About :: End === */
+
+  /* == Landing  - Pricing :: Start == */
+
+  #pricing {
+    margin-top: 100px;
+  }
+
+  .lb-container {
+    width: var(--s-m-container);
+  }
+
+  .lb-wrapper {
+    padding: 150px 20px 30px;
+  }
+
+  .section-wrapper::before,
+  .section-wrapper::after {
+    display: none !important;
+  }
+
+  .section-slide {
+    width: var(--s-m-container);
+  }
+
+  .section-wrapper {
+    padding: 30px 0px;
+  }
+
+  .pricing-row {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .pricing-col {
+    width: 100% !important;
+  }
+
+  .pricing-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-100);
+    transition: var(--global-transation);
+    padding: 20px;
+    border-radius: var(--global-border-radius);
+  }
+
+  .pricing-card-header {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px 0px;
+  }
+
+  .pricing-card-header::after {
+    border-bottom: 1px solid #e6e9ed;
+    border-right: 0;
+  }
+
+  .pricing-card-header p {
+    font-size: 36px;
+  }
+
+  .pricing-card-services {
+    width: 100%;
+  }
+
+  .offer-tag {
+    z-index: 1;
+  }
+
+  /* == Landing  - Pricing :: End == */
+
+  /* === Landing - Checkout :: Start === */
+  .checkout-body {
+    height: 100%;
+  }
+
+  .checkout-wrapper {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .checkout-billing-form.shadow-sm {
+    margin-bottom: 30px;
+  }
+
+  .checkbox-head {
+    margin-left: 0;
+    padding: 0px 15px;
+  }
+
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-billing-form,
+  .checkout-details-section {
+    width: 100%;
+  }
+
+  /* === Landing - Checkout :: End === */
+
+  /* === Dashboard - Home :: Start === */
+  .best-selling-book {
+    padding: 60px 0px;
+  }
+
+  .browse-category {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    padding: 0px 10px;
+  }
+
+  .book-card-info h1 {
+    font-size: 16px;
+  }
+
+  .book-card-info p {
+    color: #8D8D8D;
+    font-size: 14px;
+  }
+
+  /* === Dashboard - Home :: End === */
+
+  /* === Dashboard - Guides :: Start === */
+  .guides-section {
+    padding: 10px;
+  }
+
+  .guide-card {
+    width: 30%;
+    margin: 7px;
+  }
+
+  /* === Dashboard - Guides :: End === */
+
+
+  /* === Dashboard - Forum :: Start === */
+  .forum-main {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .forum-post-wrapper {
+    padding: 10px;
+  }
+
+  .forum-post-info {
+    flex-direction: column;
+  }
+
+  .forum-post-card p {
+    font-size: 14px;
+  }
+
+  .forum-post-info div {
+    margin: 0;
+  }
+
+  .forum-publisher-info h5 {
+    font-size: 14px;
+  }
+
+  .forum-publisher-info p {
+    font-size: 11px;
+  }
+
+  .forum-main .forum-main-all-forum {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-main-all-forum-item {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .forum-main .forum-main-rightbar {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* forum-details page start  */
+
+  .forum-details .forum-details-section {
+    flex-direction: column;
+  }
+
+  .forum-details .forum-details-post {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .forum-details .forum-details-rightbar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .forum-details {
+    padding: 18px 22px;
+  }
+
+  .forum-details .forum-details-title h2 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-title p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post {
+    padding: 20px;
+  }
+
+  .forum-details .forum-details-post h5 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile {
+    margin: 12px 0;
+  }
+
+  .forum-details .forum-details-post .forum-info p {
+    font-size: 10px;
+  }
+
+  .forum-details .forum-details-post .forum-info i {
+    margin: 0 5px 0 9px;
+  }
+
+  .forum-details .forum-details-post .forum-description {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .feedback {
+    padding: 8px 16px;
+  }
+
+  .forum-details .forum-details-post .feedback i {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment {
+    padding: 20px 21px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment p {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment .comment-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section {
+    padding: 20px 18px 14px 20px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea {
+    height: 100px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section button {
+    margin-right: 14px;
+  }
+
+  /* forum-details-rightbar */
+  .forum-details .forum-details-rightbar {
+    padding: 16px;
+  }
+
+  .forum-details .forum-details-rightbar hr {
+    margin: 25px 0 22px 0;
+  }
+
+  .forum-details-rightbar .popular-forum-post h2,
+  .forum-details-rightbar .related-forum-post h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card {
+    margin-top: 22px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card h6,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card h6 {
+    font-size: 14px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card p,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card p {
+    font-size: 10px;
+  }
+
+  .forum-details-rightbar .trending-topics h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .trending-topics p {
+    font-size: 16px;
+  }
+
+  .forum-post-info div {
+    margin: 0px;
+  }
+
+  /* forum mane page start */
+  .forum-main {
+    flex-direction: column;
+  }
+
+  .forum-main .forum-main-all-forum {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-main-all-forum-item {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .forum-main .forum-main-rightbar {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* forum-details page start  */
+
+  .forum-details .forum-details-section {
+    flex-direction: column;
+  }
+
+  .forum-details .forum-details-post {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .forum-details .forum-details-rightbar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .forum-details {
+    padding: 18px 22px;
+  }
+
+  .forum-details .forum-details-title h2 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-title p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post {
+    padding: 20px;
+  }
+
+  .forum-details .forum-details-post h5 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile {
+    margin: 12px 0;
+  }
+
+  .forum-details .forum-details-post .forum-info p {
+    font-size: 10px;
+  }
+
+  .forum-details .forum-details-post .forum-info i {
+    margin: 0 5px 0 9px;
+  }
+
+  .forum-details .forum-details-post .forum-description {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .feedback {
+    padding: 8px 16px;
+  }
+
+  .forum-details .forum-details-post .feedback i {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment {
+    padding: 20px 21px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment p {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment .comment-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section {
+    padding: 20px 18px 14px 20px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea {
+    height: 100px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section button {
+    margin-right: 14px;
+  }
+
+  /* forum-details-rightbar */
+  .forum-details .forum-details-rightbar {
+    padding: 16px;
+  }
+
+  .forum-details .forum-details-rightbar hr {
+    margin: 25px 0 22px 0;
+  }
+
+  .forum-details-rightbar .popular-forum-post h2,
+  .forum-details-rightbar .related-forum-post h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card {
+    margin-top: 22px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card h6,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card h6 {
+    font-size: 14px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card p,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card p {
+    font-size: 10px;
+  }
+
+  .forum-details-rightbar .trending-topics h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .trending-topics p {
+    font-size: 16px;
+  }
+
+  /* === Dashboard - Forum :: End === */
+
+  .insights-book-wrapper {
+    overflow-y: scroll;
+    height: 650px;
+    padding: 10px 10px;
+    margin: 20px 10px;
+  }
+
+  .home-section {
+    width: 100% !important;
+    padding: 20px;
+    margin: 45px auto;
+  }
+
+  /* home page start  */
+  .home-bg-top {
+    height: 773px;
+  }
+
+  .home-section {
+    width: 420px;
+  }
+
+  .home-video-container {
+    margin-top: 495px;
+  }
+
+  .home-nav button {
+    padding: 7px 35px;
+    font-size: 14px;
+  }
+
+  /* home page end  */
+
+  /* === Dashboard - Login :: Start === */
+  .login-bg img {
+    width: 23%;
+  }
+
+  .login-form form {
+    top: 485px;
+  }
+
+  /* === Dashboard - Login :: End === */
+
+
+  /* === Dashboard - Books Collection :: Start === */
+  .books-collection {
+    grid-template-columns: auto auto;
+  }
+
+  /* === Dashboard - Books Collection :: End === */
+
+
+  /* === Dashboard - Guides :: Start === */
+  .guides-collection {
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+
+  .guide-details-section {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .guide-details-sitebar {
+    width: 100%;
+  }
+
+  .guide-details .d-flex {
+    flex-direction: column;
+  }
+
+  .guide-details-sitebar img {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .guide-details-sitebar h6 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .guide-details-sitebar p {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  /* === Dashboard - Guides :: End === */
+
+  /* === Dashboard - Journal :: Start === */
+  .journals .journals-collection {
+    grid-template-columns: auto;
+  }
+
+  .journals {
+    margin: 18px 20px;
+  }
+
+  .journals button {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  /* .journals page end*/
+
+  /* journals details page start  */
+  .journal-details-section {
+    height: 100%;
+  }
+
+  .journal-details-section h2,
+  .journal-details-section h5 {
+    font-size: 18px;
+  }
+
+  /* journals details page end  */
+  /*write journals page start  */
+  .write-journal {
+    padding: 7px 11px;
+    background-color: #fafcff;
+  }
+
+  .write-journal button {
+    padding: 12px 13px;
+    font-size: 14px;
+  }
+
+  .write-journal .active {
+    padding: 12px 13px;
+    font-size: 14px;
+  }
+
+  /* === Dashboard - Journal :: End === */
+
+  /* video page start */
+  /* and audio page start */
+  .courses-video,
+  .courses-audio {
+    padding: 16px;
+  }
+
+  .courses-video-section,
+  .courses-audio-section {
+    flex-direction: column-reverse;
+  }
+
+  .courses-video-modul,
+  .courses-audio-modul {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .courses-video .video,
+  .courses-audio .audio {
+    width: 100%;
+  }
+
+  /* insights cursor section  */
+  .insights-section {
+    flex-direction: column;
+  }
+
+  .insights-book-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .insights-course-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+
+  /* dashbord page  */
+  .dashbord-section {
+    flex-direction: column;
+  }
+
+  .dashobrd-book-section {
+    width: 100%;
+  }
+
+  .dashboard-course-section {
+    width: 100%;
+  }
+
+  .dashobrd-book-section .dashobrd-book {
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+  }
+
+  .dashobrd-book-section .dashobrd-book .dashobrd-book-card h6 {
+    font-size: 12px;
+  }
+
+  .dashobrd-book-section .dashobrd-book .dashobrd-book-card p {
+    font-size: 10px;
+  }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+  /* === Dashboard - Home :: Start === */
+  .header-container {
+    width: var(--s-m-container);
+  }
+
+  .header-row {
+    padding: 15px 35px;
+  }
+
+  .video-section-container {
+    width: var(--s-m-container);
+  }
+
+  .video-section-wrapper::before,
+  .video-section-wrapper::after {
+    display: none;
+  }
+
+  .video-section-col {
+    padding: 30px;
+  }
+
+  .video-section-col iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px !important;
+  }
+
+  #footer {
+    padding: 30px 12px;
+  }
+
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  .footer-row {
+    padding: 10px;
+  }
+
+  .footer-link ul li {
+    margin: 0 !important;
+  }
+
+  .footer-link ul li a {
+    font-size: 10px;
+  }
+
+  /* === Dashboard - Home :: End === */
+
+  /* === Landing - About :: Start === */
+  .section-slide-row {
+    padding: 60px;
+  }
+
+  .slide-col {
+    padding: 30px;
+  }
+
+  .slide-content.about-desc {
+    text-align: justify;
+  }
+
+  /* === Landing - About :: End === */
+
+  /* == Landing  - Pricing :: Start == */
+
+  #pricing {
+    margin-top: 100px;
+  }
+
+  .lb-container {
+    width: var(--s-m-container);
+  }
+
+  .lb-wrapper {
+    padding: 150px 20px 30px;
+  }
+
+  .section-wrapper::before,
+  .section-wrapper::after {
+    display: none !important;
+  }
+
+  .section-slide {
+    width: var(--s-m-container);
+  }
+
+  .section-wrapper {
+    padding: 30px 0px;
+  }
+
+  .pricing-row {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .pricing-col {
+    width: 50% !important;
+  }
+
+  .pricing-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-100);
+    transition: var(--global-transation);
+    padding: 20px;
+    border-radius: var(--global-border-radius);
+  }
+
+  .pricing-card-header {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px 0px;
+  }
+
+  .pricing-card-header::after {
+    border-bottom: 1px solid #e6e9ed;
+    border-right: 0;
+  }
+
+  .pricing-card-header p {
+    font-size: 36px;
+  }
+
+  .pricing-card-services {
+    width: 100%;
+  }
+
+  .offer-tag {
+    z-index: 1;
+  }
+
+  /* == Landing  - Pricing :: End == */
+
+  /* === Landing - Policy Page :: Stat === */
+  .policy-page-container {
+    width: var(--s-m-container);
+  }
+
+  /* === Landing - Policy Page :: End === */
+
+  /* === Landing - Checkout :: Start === */
+  .checkout-body {
+    height: 100%;
+  }
+
+  .checkout-wrapper {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .checkout-billing-form.shadow-sm {
+    margin-bottom: 30px;
+  }
+
+  .checkbox-head {
+    margin-left: 0;
+    padding: 0px 15px;
+  }
+
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-billing-form,
+  .checkout-details-section {
+    width: 100%;
+  }
+
+  /* === Landing - Checkout :: End === */
+
+  /* === Dashboard - Home :: Start === */
+  .browse-category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    padding: 0px 10px;
+  }
+
+  /* === Dashboard - Home :: End === */
+
+  /* === Dashboard - Guides :: Start === */
+  .guides-section {
+    padding: 10px;
+  }
+
+  .guide-card {
+    width: 30%;
+    margin: 12px;
+  }
+
+  /* === Dashboard - Guides :: End === */
+  .forum-post-info div {
+    margin: 0px;
+  }
+
+  .my-dashboard {
+    padding: 25px 4px 20px 0px;
+    background-color: #fafcff;
+  }
+
+  .brws-books-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+  }
+
+  .book-card-info h1 {
+    font-size: 14px;
+  }
+
+  .book-card-info p {
+    color: #8D8D8D;
+    font-size: 12px;
+  }
+
+  .course-card-info h6 {
+    font-size: 12px;
+  }
+
+  .course-card-info p {
+    font-size: 12px;
+  }
+
+  main.dashboard-content-wrapper {
+    padding: 10px;
+  }
+
+  .home-section {
+    width: 100% !important;
+    padding: 20px;
+    margin: 45px auto;
+  }
+
+  /* home page start  */
+  .home-bg-top {
+    height: 577px;
+  }
+
+  .home-section {
+    width: 500px;
+  }
+
+  .home-video-container {
+    margin-top: 261px;
+  }
+
+  /* home page end  */
+
+  /* book page start  */
+  .books-collection {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* book page end  */
+  /* guides page start  */
+  .guides-collection {
+    grid-template-columns: auto auto;
+  }
+
+  /* guides page end  */
+  /* guides page details start  */
+  .guide-details-section {
+    height: 100% !important;
+  }
+
+  .guide-details-sitebar {
+    padding: 18px 13px;
+  }
+
+  .guide-details-sitebar .d-flex {
+    flex-direction: column;
+  }
+
+  .guide-details-sitebar img {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .guide-details-sitebar h6 {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .guide-details-sitebar p {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  /* guides  details page end  */
+
+  /* journals page start  */
+  .journals .journals-collection {
+    grid-template-columns: auto auto;
+  }
+
+  /* journals page end  */
+
+  /* journals details page start  */
+  .journal-details-section {
+    height: 100%;
+  }
+
+  .journal-details-section h2,
+  .journal-details-section h5 {
+    font-size: 18px;
+  }
+
+  /* journals details page end  */
+  /*write journals page start  */
+  .write-journal {
+    padding: 7px 11px;
+    background-color: #fafcff;
+  }
+
+  .write-journal button {
+    padding: 12px 13px;
+  }
+
+  .write-journal .active {
+    padding: 12px 13px;
+  }
+
+  /* video page start */
+  /* and audio page start */
+  .courses-video-section,
+  .courses-audio-section {
+    flex-direction: column-reverse;
+  }
+
+  .courses-video-modul,
+  .courses-audio-modul {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .courses-video .video,
+  .courses-audio .audio {
+    width: 100%;
+  }
+
+  /* insights cursor section  */
+  .insights-section {
+    flex-direction: column;
+  }
+
+  .insights-book-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .insights-course-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+
+  /* dashbord page  */
+  .dashbord-section {
+    flex-direction: column;
+  }
+
+  .dashobrd-book-section {
+    width: 100%;
+  }
+
+  .dashboard-course-section {
+    width: 100%;
+  }
+
+  .dashobrd-book-section .dashobrd-book {
+    grid-column-gap: 35px;
+    grid-row-gap: 10px;
+  }
+
+  /* forum mane page start */
+  .forum-main {
+    flex-direction: column;
+  }
+
+  .forum-main .forum-main-all-forum {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-main-all-forum-item {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .forum-main .forum-main-rightbar {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* forum-details page start  */
+
+  .forum-details .forum-details-section {
+    flex-direction: column;
+  }
+
+  .forum-details .forum-details-post {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .forum-details .forum-details-rightbar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .books-collection .book {
+    width: 25%;
+    margin: 0px 25px;
+    padding: 0px 15px;
+  }
+
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+
+  /* === Dashboard - Home :: Start === */
+  .header-container {
+    width: var(--s-m-container);
+  }
+
+  .header-row {
+    padding: 15px 35px;
+  }
+
+  .video-section-container {
+    width: var(--s-m-container);
+  }
+
+  .video-section-wrapper::before,
+  .video-section-wrapper::after {
+    display: none;
+  }
+
+  .video-section-col {
+    padding: 30px;
+  }
+
+  .video-section-col iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px !important;
+  }
+
+  #footer {
+    padding: 30px 12px;
+  }
+
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  .footer-row {
+    padding: 10px;
+  }
+
+  .footer-link ul li {
+    margin: 0 !important;
+  }
+
+  .footer-link ul li a {
+    font-size: 10px;
+  }
+
+  /* === Dashboard - Home :: End === */
+
+  /* === Landing - About :: Start === */
+  .section-slide-row {
+    padding: 60px;
+  }
+
+  .slide-col {
+    padding: 30px;
+  }
+
+  /* === Landing - About :: End === */
+
+  /* == Landing  - Pricing :: Start == */
+
+  #pricing {
+    margin-top: 100px;
+  }
+
+  .lb-container {
+    width: var(--s-m-container);
+  }
+
+  .lb-wrapper {
+    padding: 150px 20px 30px;
+  }
+
+  .section-wrapper::before,
+  .section-wrapper::after {
+    display: none !important;
+  }
+
+  .section-slide {
+    width: var(--s-m-container);
+  }
+
+  .section-wrapper {
+    padding: 30px 0px;
+  }
+
+  .pricing-row {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .pricing-col {
+    width: 50% !important;
+  }
+
+  .pricing-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-100);
+    transition: var(--global-transation);
+    padding: 20px;
+    border-radius: var(--global-border-radius);
+  }
+
+  .pricing-card-header {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px 0px;
+  }
+
+  .pricing-card-header::after {
+    border-bottom: 1px solid #e6e9ed;
+    border-right: 0;
+  }
+
+  .pricing-card-header p {
+    font-size: 36px;
+  }
+
+  .pricing-card-services {
+    width: 100%;
+  }
+
+  .offer-tag {
+    z-index: 1;
+  }
+
+  /* == Landing  - Pricing :: End == */
+
+  /* === Landing - Policy Page :: Stat === */
+  .policy-page-container {
+    width: var(--s-m-container);
+    padding: 30px;
+  }
+
+  /* === Landing - Policy Page :: End === */
+
+  /* home page start  */
+  .home-bg-top {
+    height: 509px;
+  }
+
+  .home-section {
+    width: 835px;
+  }
+
+  /* home page end  */
+
+  /* check out start  */
+  .checkout-body {
+    height: 100%;
+  }
+
+  .checkbox-head {
+    margin-left: 0;
+    padding: 0px 45px;
+  }
+
+  .checkout-billing-form {
+    width: 558px;
+  }
+
+  .checkout-details-section {
+    width: 306px;
+  }
+
+  /* checkout end  */
+
+  /* book page start  */
+  .books-collection {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* book page end  */
+
+  /* guides page start  */
+  .guides-collection {
+    grid-template-columns: auto auto;
+  }
+
+  /* guides page end  */
+
+  /* guides  details page start  */
+  .guide-details-section {
+    height: 100% !important;
+  }
+
+  .guide-details-sitebar {
+    padding: 18px 13px;
+  }
+
+  .guide-details-sitebar h6 {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .guide-details-sitebar p {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  /* guides  details page end  */
+  /* journals page start  */
+  .journals .journals-collection {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* journals page end  */
+
+  /* journals details page start  */
+  .journal-details-section {
+    height: 100%;
+  }
+
+  .journal-details-section h2,
+  .journal-details-section h5 {
+    font-size: 20px;
+  }
+
+  /* video page  */
+  /* and audio  */
+  .courses-video .video,
+  .courses-audio .audio {
+    width: 49%;
+  }
+
+  .courses-video-modul,
+  .courses-audio-modul {
+    width: 49%;
+  }
+
+  .courses-video,
+  .courses-audio {
+    padding: 15px 35px;
+  }
+
+  /* insights cursor section  */
+  .insights-course-section .insights-course .insights-course-card h6 {
+    font-size: 12px;
+  }
+
+  .insights-course-section .insights-course {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 15px;
+  }
+
+  .insights-course-section .insights-course .insights-course-card p {
+    font-size: 10px;
+  }
+
+  /* dashbord page 
+     */
+  .dashobrd-book-section .dashobrd-book {
+    grid-column-gap: 2px;
+  }
+
+  .dashobrd-book-section .dashobrd-book .dashobrd-book-card h6 {
+    font-size: 12px;
+  }
+
+  .dashobrd-book-section .dashobrd-book .dashobrd-book-card p {
+    font-size: 10px;
+  }
+
+  /* forum main  page  start*/
+  .forum-main {
+    padding: 18px 14px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-main-all-forum-item {
+    padding: 10px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-card h5 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-card p {
+    font-size: 12px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-card i {
+    margin-right: 8px;
+    margin-left: 12px;
+  }
+
+  /* forum-main-rightbar */
+  .forum-main .forum-main-rightbar {
+    padding: 16px 20px;
+  }
+
+  .forum-main-rightbar .popular-forum-post h2 {
+    font-size: 16px;
+  }
+
+  .forum-main-rightbar .popular-forum-post .popular-forum-post-card h6 {
+    font-size: 12px;
+  }
+
+  .forum-main-rightbar .popular-forum-post .popular-forum-post-card p {
+    font-size: 10px;
+  }
+
+  /* forum details page  */
+  .forum-details {
+    padding: 18px 22px;
+  }
+
+  .forum-details .forum-details-title h2 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-title p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post {
+    padding: 20px;
+  }
+
+  .forum-details .forum-details-post h5 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile {
+    margin: 12px 0;
+  }
+
+  .forum-details .forum-details-post .forum-info p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-info i {
+    margin: 0 8px 0 20px;
+  }
+
+  .forum-details .forum-details-post .forum-description {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .feedback {
+    padding: 12px 20px;
+  }
+
+  .forum-details .forum-details-post .feedback i {
+    font-size: 15px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment {
+    padding: 20px 21px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment p {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment .comment-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section {
+    padding: 20px 18px 14px 20px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea {
+    height: 100px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section button {
+    margin-right: 14px;
+  }
+
+  /* forum-details-rightbar */
+  .forum-details .forum-details-rightbar {
+    padding: 16px;
+  }
+
+  .forum-details .forum-details-rightbar hr {
+    margin: 25px 0 22px 0;
+  }
+
+  .forum-details-rightbar .popular-forum-post h2,
+  .forum-details-rightbar .related-forum-post h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card {
+    margin-top: 22px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card h6,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card h6 {
+    font-size: 14px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card p,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card p {
+    font-size: 10px;
+  }
+
+  .forum-details-rightbar .trending-topics h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .trending-topics p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  #footer {
+    padding: 30px 12px;
+  }
+  .checkbox-head {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .checkout-body {
+    height: 100%;
+  }
+
+  .checkout-filed-col {
+    margin: 15px;
+  }
+
+  /* === Header :: Start === */
+  .header-container {
+    width: var(--s-m-container);
+  }
+
+  .header-row {
+    padding: 15px 20px;
+  }
+
+  /* === Header :: End === */
+
+  /* === Landing - Home :: Start === */
+  .video-section-wrapper::before {
+    top: -5px;
+    left: -350px;
+  }
+
+  .video-section-container {
+    width: 100%;
+    margin: 0 auto;
+    height: fit-content;
+    padding: 30px;
+  }
+
+  /* === Landing - Home :: End === */
+
+  /* === Landing - About :: Start === */
+  .section-slide-row {
+    padding: 60px;
+  }
+
+  /* === Landing - About :: End === */
+
+  /* === Landing - Policy Page :: Stat === */
+  .policy-page-container {
+    width: var(--s-m-container);
+    padding: 30px;
+  }
+
+  /* === Landing - Policy Page :: End === */
+
+  /* === Footer :: Start === */
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  .footer-link-item.footer-link ul li a {
+    font-size: 12px;
+  }
+
+  /* === Footer :: End === */
+
+  .forum-post-info {
+    margin-top: 15px;
+    flex-direction: column;
+  }
+
+  .forum-post-info div {
+    margin: 0;
+  }
+
+  .forum-post-wrapper {
+    padding: 30px 30px 0px 30px;
+    overflow-y: scroll;
+    height: 700px;
+  }
+
+  .insights-book-wrapper {
+    padding: 10px 0px;
+  }
+
+  .brws-books-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+  }
+
+  .book-card-info h1 {
+    font-size: 14px;
+  }
+
+  .course-card-info h6 {
+    font-size: 12px;
+  }
+
+  .course-card-info p {
+    font-size: 10px;
+  }
+
+  .my-dashboard {
+    padding: 25px 10px 20px 10px;
+    background-color: #fafcff;
+  }
+
+  main.dashboard-content-wrapper {
+    padding: 10px;
+  }
+
+  .book-card-info p {
+    color: #8D8D8D;
+    font-size: 12px;
+  }
+
+  /* home page start  */
+  .home-bg-top {
+    height: 440px;
+  }
+
+  .home-section {
+    width: 835px;
+  }
+
+  /* home page end  */
+
+  /* == Landing  - Pricing :: Start == */
+
+  #pricing {
+    margin-top: 100px;
+  }
+
+  .lb-container {
+    width: var(--s-m-container);
+  }
+
+  .lb-wrapper {
+    padding: 150px 20px 30px;
+  }
+
+  .section-wrapper::before,
+  .section-wrapper::after {
+    display: none !important;
+  }
+
+  .section-slide {
+    width: var(--s-m-container);
+  }
+
+  .section-wrapper {
+    padding: 30px 0px;
+  }
+
+  .pricing-row {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .pricing-col {
+    width: 50% !important;
+  }
+
+  .pricing-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-100);
+    transition: var(--global-transation);
+    padding: 20px;
+    border-radius: var(--global-border-radius);
+  }
+
+  .pricing-card-header {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px 0px;
+  }
+
+  .pricing-card-header::after {
+    border-bottom: 1px solid #e6e9ed;
+    border-right: 0;
+  }
+
+  .pricing-card-header p {
+    font-size: 36px;
+  }
+
+  .pricing-card-services {
+    width: 100%;
+  }
+
+  .offer-tag {
+    z-index: 1;
+  }
+
+  /* == Landing  - Pricing :: End == */
+
+  /* book page start  */
+  .books-collection {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  /* book page end  */
+
+  /* guides page start  */
+  .guides-collection {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* guides page end  */
+
+  /* guides page details start  */
+
+  .guide-details-sitebar {
+    padding: 18px 25px;
+  }
+
+  .guide-details-sitebar h6 {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .guide-details-sitebar p {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  /* guides  details page end  */
+
+  .journals .journals-collection {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* courses page start  */
+  .courses-section {
+    padding: 20px;
+  }
+
+  .courses-collection {
+    padding: 24px;
+    width: 100%;
+  }
+
+  .courses-section h6 {
+    font-size: 14px;
+  }
+
+  /* courses page start  */
+  /* video page start */
+  .courses-video,
+  .courses-audio {
+    padding: 10px;
+  }
+
+  /* insights cursor section  */
+  .insights-course-section .insights-course .insights-course-card h6 {
+    font-size: 12px;
+  }
+
+  /* dashbord page 
+     */
+  .dashobrd-book-section .dashobrd-book {
+    grid-column-gap: 20px;
+  }
+
+  /* forum main  page  start*/
+  .forum-main {
+    padding: 22px 18px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-main-all-forum-item {
+    padding: 10px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-card h5 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-card p {
+    font-size: 12px;
+  }
+
+  .forum-main .forum-main-all-forum .forum-card i {
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  /* forum-main-rightbar */
+  .forum-main .forum-main-rightbar {
+    padding: 22px 30px;
+  }
+
+  .forum-main-rightbar .popular-forum-post h2 {
+    font-size: 16px;
+  }
+
+  .forum-main-rightbar .popular-forum-post .popular-forum-post-card h6 {
+    font-size: 14px;
+  }
+
+  /* forum main  page  end*/
+  /* forum details  page  start*/
+
+  /* forum details page  */
+  .forum-details {
+    padding: 18px 22px;
+  }
+
+  .forum-details .forum-details-title h2 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-title p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post {
+    padding: 20px;
+  }
+
+  .forum-details .forum-details-post h5 {
+    font-size: 20px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-publisher-profile {
+    margin: 12px 0;
+  }
+
+  .forum-details .forum-details-post .forum-info p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .forum-info i {
+    margin: 0 8px 0 20px;
+  }
+
+  .forum-details .forum-details-post .forum-description {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .feedback {
+    padding: 12px 20px;
+  }
+
+  .forum-details .forum-details-post .feedback i {
+    font-size: 15px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment {
+    padding: 20px 21px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment p {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .forum-feedback-comment .comment-profile p {
+    font-size: 12px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section {
+    padding: 20px 18px 14px 20px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea {
+    height: 100px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .forum-details .forum-details-post .add-comment-section button {
+    margin-right: 14px;
+  }
+
+  /* forum-details-rightbar */
+  .forum-details .forum-details-rightbar {
+    padding: 16px;
+  }
+
+  .forum-details .forum-details-rightbar hr {
+    margin: 25px 0 22px 0;
+  }
+
+  .forum-details-rightbar .popular-forum-post h2,
+  .forum-details-rightbar .related-forum-post h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card {
+    margin-top: 22px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card h6,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card h6 {
+    font-size: 14px;
+  }
+
+  .forum-details-rightbar .popular-forum-post .popular-forum-post-card p,
+  .forum-details-rightbar .related-forum-post .related-forum-post-card p {
+    font-size: 10px;
+  }
+
+  .forum-details-rightbar .trending-topics h2 {
+    font-size: 18px;
+  }
+
+  .forum-details-rightbar .trending-topics p {
+    font-size: 16px;
+  }
+
+  /* Footer :: Start */
+  .footer-container {
+    width: var(--s-m-container);
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1360px) {
+  #footer {
+    padding: 30px 12px;
+  }
+  .lb-container {
+    width: var(--s-m-container);
+  }
+  .checkbox-head {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .checkout-body {
+    height: 100%;
+  }
+
+  .checkout-filed-col {
+    margin: 15px;
+  }
+
+  /* === Header :: Start === */
+  .header-container {
+    width: var(--s-m-container);
+  }
+
+  .header-row {
+    padding: 15px 20px;
+  }
+
+  /* === Header :: End === */
+
+  /* === Landing - Home :: Start === */
+  .video-section-wrapper::before {
+    top: -5px;
+    left: -285px;
+  }
+
+  /* === Landing - Home :: End === */
+
+  /* === Landing - About :: Start === */
+
+  .slide-col {
+    width: 50%;
+    padding: 25px 30px;
+    height: 100%;
+  }
+
+  /* === Landing - About :: End  === */
+
+  /* === Landing - Pricing :: Start === */
+  .section-slide {
+    width: var(--s-m-container);
+  }
+
+  .section-wrapper::before {
+    left: -285px;
+  }
+
+  .pricing-card-header {
+    text-align: center;
+  }
+
+  .pricing-card-header p {
+    font-size: 32px;
+  }
+
+  /* === Landing - Pricing :: End === */
+
+  /* === Landing - Policy Page :: Stat === */
+  .policy-page-container {
+    width: var(--s-m-container);
+    padding: 30px;
+  }
+
+  /* === Landing - Policy Page :: End === */
+
+  /* === Footer :: Start === */
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  .footer-link-item.footer-link ul li a {
+    font-size: 80%;
+  }
+
+  /* === Footer :: End === */
+
+  /* book page start  */
+  .books-collection {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  /* book page end  */
+
+  /* guides page start  */
+  .guides-collection {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* guides page end  */
+
+  /* courses page start  */
+  .courses-section {
+    padding: 25px;
+  }
+
+  .courses-collection {
+    padding: 24px;
+    width: 98%;
+  }
+
+  .courses-section h6 {
+    font-size: 14px;
+  }
+
+  /* video page start */
+  /* and audio page start */
+  .courses-video,
+  .courses-audio {
+    padding: 10px;
+  }
+
+  /* dashbord page  */
+  .dashobrd-book-section .dashobrd-book {
+    grid-column-gap: 40px;
+    grid-row-gap: 23px;
+  }
+}
+
+@media only screen and (min-width: 1361px) and (max-width: 1440px) {
+
+  /* === Header :: Start === */
+  .header-container {
+    width: var(--s-m-container);
+  }
+
+  .header-row {
+    padding: 15px 30px;
+  }
+
+  /* === Header :: End === */
+
+  /* === Landing - About :: Start === */
+  .section-slide-row {
+    padding: 30px;
+  }
+
+  /* === Landing - About :: End === */
+
+  /* === Landing - Pricing :: Start === */
+  .section-slide {
+    width: var(--s-m-container);
+  }
+
+  .section-wrapper::before {
+    left: -285px;
+  }
+
+  .pricing-card-header {
+    text-align: center;
+  }
+
+  .pricing-card-header p {
+    font-size: 32px;
+  }
+
+  /* === Landing - Pricing :: End === */
+
+  /* === Landing - Policy Page :: Stat === */
+  .policy-page-container {
+    width: var(--s-m-container);
+    padding: 30px;
+  }
+
+  /* === Landing - Policy Page :: End === */
+
+  /* === Footer :: Start === */
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  .footer-link-item.footer-link ul li a {
+    font-size: 80%;
+  }
+
+  /* === Footer :: End === */
+
+
+  /* === Footer :: Start */
+  .footer-container {
+    width: var(--s-m-container);
+  }
+
+  .footer-social {
+    padding: 0px 20px;
+  }
+
+  /* === Footer :: End */
+}

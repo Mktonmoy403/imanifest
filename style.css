@@ -977,8 +977,6 @@ textarea {
 	text-align: center;
   }
   .error_page h1 {
-	font-family: "Roboto", sans-serif;
-	font-weight: 700;
 	color: #262626;
 	margin-bottom: 30px;
 	text-transform: uppercase;
@@ -986,6 +984,7 @@ textarea {
   .error_page p {
 	color: #0963CD;
 	margin-bottom: 0;
+	font-size: 75px;
   }
   .error_page a.homepage {
 	background: #031D3C;
@@ -1000,7 +999,7 @@ textarea {
 	transition: 0.5s;
   }
   .error_page a.homepage:hover {
-	background: #262626;
+	background: #031D3C;
   }
   .error_search {
 	margin-bottom: 15px;
@@ -1022,3 +1021,6 @@ textarea {
 	background: #031D3C;
 	border: 1px solid #031D3C;
   }
+  .error_search input.search-field {
+    padding: 6px;
+}
