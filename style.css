@@ -1011,14 +1011,14 @@ textarea {
 	padding: 10px;
   }
   .error_search input[type="submit"] {
-	background: #ea1a70;
-	border: 1px solid #ea1a70;
+	background: #0963CD;
+	border: 1px solid #0963CD;
 	padding: 10px;
 	margin: 0;
 	color: #fff;
 	transition: 0.5s;
   }
   .error_search input[type="submit"]:hover {
-	background: #262626;
-	border: 1px solid #262626;
+	background: #031D3C;
+	border: 1px solid #031D3C
   }
