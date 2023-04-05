@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="container">
       <div class="row">
         <div class="col-md-12 error_page">
-          <img src="" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/404/404.jpg" alt="">
             <!-- <p>404 Error - Page not Found</p>
             <h1>Oops! Looks Like something was wrong</h1> -->
             <div class="error_search">

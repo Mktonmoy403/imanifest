@@ -973,19 +973,9 @@ textarea {
   404 Area Styling
 ===========================================*/
 .error_page {
-	padding: 50px 0;
 	text-align: center;
   }
-  .error_page h1 {
-	color: #262626;
-	margin-bottom: 30px;
-	text-transform: uppercase;
-  }
-  .error_page p {
-	color: #0963CD;
-	margin-bottom: 0;
-	font-size: 75px;
-  }
+
   .error_page a.homepage {
 	background: #031D3C;
 	color: #fff;
@@ -1023,4 +1013,7 @@ textarea {
   }
   .error_search input.search-field {
     padding: 6px;
+}
+.error_page img{
+	max-width: 40% !important;
 }
