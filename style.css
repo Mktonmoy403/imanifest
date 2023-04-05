@@ -984,11 +984,11 @@ textarea {
 	text-transform: uppercase;
   }
   .error_page p {
-	color: #ea1a70;
+	color: #0963CD;
 	margin-bottom: 0;
   }
   .error_page a.homepage {
-	background: #ea1a70;
+	background: #031D3C;
 	color: #fff;
 	margin-bottom: 0;
 	text-decoration: none;
@@ -1020,5 +1020,5 @@ textarea {
   }
   .error_search input[type="submit"]:hover {
 	background: #031D3C;
-	border: 1px solid #031D3C
+	border: 1px solid #031D3C;
   }
