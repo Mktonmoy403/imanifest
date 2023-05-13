@@ -49,9 +49,11 @@ function imanifest_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'imanifest' ),
+			'main-menu' 	=> esc_html__( 'Imanifest Main Menu', 'imanifest' ),
+			'footer-menu' 	=> esc_html__( 'Imanifest Footer Menu', 'imanifest' ),
 		)
 	);
+	
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -137,17 +139,40 @@ add_action( 'widgets_init', 'imanifest_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function imanifest_scripts() {
-	wp_enqueue_style( 'imanifest-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'imanifest-style', 'rtl', 'replace' );
+function imanifest_scripts(){
+    // Enqueue font-awesome.css from the theme's css folder
 
-	wp_enqueue_script( 'imanifest-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	/* Theme Core */
+    wp_enqueue_style('normalize', get_template_directory_uri().'/assets/vendor/normalize-css/normalize.css');
+    wp_enqueue_style('responsive', get_template_directory_uri().'/assets/css/responsive.css');
+    wp_enqueue_style('like', get_template_directory_uri().'/assets/css/dashboard-layout.css');
+    wp_enqueue_style('layout', get_template_directory_uri().'/assets/css/dashboard-responsive.css');
+    wp_enqueue_style('bootstrap', get_template_directory_uri().'/assets/vendor/bootstrap-5.3.0/css/bootstrap.css');
+    wp_enqueue_style('bootstrap-icons', get_template_directory_uri().'/assets/vendor/bootstrap-icons-1.10.3/bootstrap-icons.css');
+    wp_enqueue_style('boxicons', '//cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css');
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// Google Font 
+    wp_enqueue_style('googleapis', '//fonts.googleapis.com');
+    wp_enqueue_style('gstatic', '//fonts.gstatic.com');
+    wp_enqueue_style('gstatic', '//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto&display=swap');
+    wp_enqueue_style('style', get_template_directory_uri().'/assets/css/style.css');
+	
+    
+    // Enqueue the main stylesheet of the theme
+    wp_enqueue_style('stylesheet', get_stylesheet_uri());
+
+    // Enqueue jQuery
+    wp_enqueue_script('jquery');
+    
+    // Enqueue bootstrap.min.js from the theme's js folder
+    wp_enqueue_script('bootstrap',get_template_directory_uri().'/assets/vendor/bootstrap-5.3.0/js/bootstrap.js');
+    wp_enqueue_script('jquery-min','//ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js');
+	wp_enqueue_script('main',get_template_directory_uri().'/assets/js/main.js');
 }
-add_action( 'wp_enqueue_scripts', 'imanifest_scripts' );
+
+// Add the koncept_css_js_file function to the 'wp_enqueue_scripts' action hook
+add_action('wp_enqueue_scripts','imanifest_scripts');
+
 
 /**
  * Implement the Custom Header feature.
@@ -182,6 +207,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 ** imanifest register post type start
 
 */
+
+
+
 
 // Register All Books
 
