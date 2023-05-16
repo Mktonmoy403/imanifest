@@ -1000,7 +1000,8 @@ ul.journal-btn li.active a {
 
 .guide-card-thumbnail img {
   width: 100%;
-  height: 100%;
+  object-fit: cover;
+  height: 170px;
 }
 
 .guide-card-details {
@@ -1052,6 +1053,8 @@ ul.journal-btn li.active a {
 
 .guide-details-section img {
   width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
 
 .guide-details-section h2 {
@@ -1116,7 +1119,9 @@ ul.journal-btn li.active a {
 .guide-details-sitebar img {
   width: 81px;
   border-radius: 4px;
+  height: 60px;
   margin-right: 12px;
+  object-fit: cover;
 }
 
 .guide-details-sitebar hr {

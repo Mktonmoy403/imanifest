@@ -10,7 +10,7 @@ get_header();
 
         <!-- Dashboard :: Right -> Start -->
         <div class="dash-main-left">
-            
+        <?php get_template_part( 'template-parts/side-bar' ); ?>
         </div>
         <!-- Dashboard :: Right -> End -->
 
@@ -21,161 +21,51 @@ get_header();
                 <!-- Dashboard Breadcrumb :: Start -->
                 <section id="dash-breadcrumb" class="dash-breadcrumb-tree">
                     <div class=""></div>
-                    <h3 class="dash-active-page">Guides</h3>
+                    <h3 class="dash-active-page">Gentles Men Library</h3>
                     <ul class="m-0 p-0">
-                        <li class="d-inline-block"><a href="dashboard.html">Dashboard</a></li>
+                        <li class="d-inline-block"><a href="<?php echo home_url('/my-dashboard');?>">Dashboard</a></li>
                         <li class="d-inline-block"><i class="bi bi-chevron-right"></i></li>
-                        <li class="d-inline-block">Guides</li>
+                        <li class="d-inline-block">Gentles Men Library</li>
                     </ul>
                 </section>
                 <!-- Dashboard Breadcrumb :: End -->
                 <div class="guides-section">
                     <div class="guides-collection guides-collection-wrapper">
 
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
+                        <?php
+                            $detais = new WP_Query(array(
+                                'post_type' => 'guides',
+                                'post_status' => 'publish',
+                            ));
 
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
+                            if ($detais->have_posts()) {
+                                while ($detais->have_posts()) {
+                                    $detais->the_post();
+                                    ?>
+                                    <div class="guide-card">
+                                        <a href="<?php the_permalink()?>">
+                                            <div class="guide-card-thumbnail">
+                                                <?php the_post_thumbnail();?>
+                                            </div>
+                                            <div class="guide-card-details">
+                                                <h6 class="guide-card-title"><?php the_title();?></h6>
+                                                <p class="guide-card-author"><?php the_author();?></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <?php
+                                }
+                            } else {
+                                echo "Nothig post";
+                            }
+                            wp_reset_postdata();
+                            ?>
 
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
 
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="guide-card">
-                            <a href="guide-details.html">
-                                <div class="guide-card-thumbnail">
-                                    <img class="thumbnail" src="assets/images/Guides(1).png" alt="">
-                                </div>
-                                <div class="guide-card-details">
-                                    <h6 class="guide-card-title">Be a side husler as a student</h6>
-                                    <p class="guide-card-author">Jhone Steben</p>
-                                </div>
-                            </a>
-                        </div>
-
+                       
                     </div>
 
                     <!-- pagination start  -->

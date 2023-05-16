@@ -4,13 +4,7 @@
                     <div class="sidebar-wrapper">
                         <div class="siderbar-menu">
                             <ul class="side-nav">
-                                <li><a href="dashboard.html" class="side-nav-link active"><i class="bi bi-columns-gap"></i> My Dashboard</a></li>
-                                <li><a href="books.html" class="side-nav-link"><i class="bi bi-columns-gap"></i> Book</a></li>
-                                <li><a href="all-journals.html" class="side-nav-link"><i class="bi bi-columns-gap"></i> Journal</a></li>
-                                <li class="active"><a href="guides.html" class="side-nav-link"><i class="bi bi-columns-gap"></i> Guides</a></li>
-                                <li><a href="courses.html" class="side-nav-link"><i class="bi bi-columns-gap"></i> Courses</a></li>
-                                <li><a href="insights.html" class="side-nav-link"><i class="bi bi-columns-gap"></i> Insights</a></li>
-                                <li><a href="forum-main.html" class="side-nav-link"><i class="bi bi-columns-gap"></i> Forum</a></li>
+                                <?php wp_nav_menu('main-menu');?>
                             </ul>
                         </div>
                         <div class="sidebar-logout">
