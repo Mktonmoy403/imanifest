@@ -10,7 +10,7 @@ jQuery(document).ready(function () {
 
 
 // Sidebar - Toggle Button
-$(document).ready(function () {
+jQuery(document).ready(function () {
 
     $(".sidebar-btn").click(function () {
         $(".dash-main-right").toggleClass('full-width');
@@ -23,7 +23,7 @@ $(document).ready(function () {
         }
     })
 
-    $(".sidebar_show_btn").click(function () {
+    jQuery(".sidebar_show_btn").click(function () {
         $(".dash-main-right").toggleClass('full-width');
         $(".dash-main-left").toggleClass('hideSidebar');
         $(".dash-main-left-inner").toggleClass('hideSidebar');
@@ -69,3 +69,27 @@ let navOffset = navbar.offsetTop;
 window.addEventListener("scroll", () => {
     (window.scrollY >= navOffset) ? navbar.classList.add("sticky_nav") : navbar.classList.remove("sticky_nav")
 });
+
+
+
+
+
+    var swiper = new Swiper(".swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true
+        },
+        spaceBetween: 60,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        }
+    });
