@@ -63,7 +63,7 @@ get_header();
                                         <div class="modal-dialog modal-dialog-scrollable">
                                             <div class="modal-content book-modal">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel"><?php the_title();?></h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel"><?php echo get_the_title(get_the_ID());?></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
