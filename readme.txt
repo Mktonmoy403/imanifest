@@ -1,4 +1,4 @@
-=== iManifest ===
+=== imanifest ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -10,11 +10,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called iManifest.
+A starter theme called imanifest.
 
 == Description ==
 
-A simple service based SASS website.
+Escape depression, unlock new knowledge - one book, one course at a time
 
 == Installation ==
 
@@ -26,7 +26,7 @@ A simple service based SASS website.
 
 = Does this theme support any plugins? =
 
-iManifest includes support for WooCommerce and for Infinite Scroll in Jetpack.
+imanifest includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

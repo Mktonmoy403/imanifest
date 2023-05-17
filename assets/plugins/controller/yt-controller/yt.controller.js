@@ -31,7 +31,7 @@ function pause() {
     player.pauseVideo();
 }
 var buyBtn = document.getElementById("get-started");
-setTimeout(myFunction, 20000); // call myFunction after 2 minutes
+setTimeout(myFunction, 900000); // call myFunction after 2 minutes
 
 function myFunction() {
     buyBtn.style.display = "block";
