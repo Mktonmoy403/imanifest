@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package imanifest
+ * @package iManifest
  */
 
 if ( ! function_exists( 'imanifest_posted_on' ) ) :

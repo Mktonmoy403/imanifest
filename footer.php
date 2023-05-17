@@ -6,27 +6,18 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package imanifest
+ * @package iManifest
  */
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'imanifest' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'imanifest' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'imanifest' ), 'imanifest', '<a href="https://bdcalling.com/">Md.kamruzzaman Tonmoy</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<?php if( is_user_logged_in() ) : ?>
+	</main></div></div>
+	<?php else: 
+		do_action( 'imenifest_render_footer' );
+	?>
+	</div>
+	<?php endif; ?>
 
 <?php wp_footer(); ?>
 

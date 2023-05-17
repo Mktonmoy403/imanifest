@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package imanifest
+ * @package iManifest
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
