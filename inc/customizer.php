@@ -1,8 +1,8 @@
 <?php
 /**
- * imanifest Theme Customizer
+ * iManifest Theme Customizer
  *
- * @package imanifest
+ * @package iManifest
  */
 
 /**

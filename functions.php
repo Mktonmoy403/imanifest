@@ -1,10 +1,10 @@
 <?php
 /**
- * imanifest functions and definitions
+ * iManifest functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package imanifest
+ * @package iManifest
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -23,7 +23,7 @@ function imanifest_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on imanifest, use a find and replace
+		* If you're building a theme based on iManifest, use a find and replace
 		* to change 'imanifest' to the name of your theme in all the template files.
 		*/
 	load_theme_textdomain( 'imanifest', get_template_directory() . '/languages' );
@@ -49,11 +49,10 @@ function imanifest_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'main-menu' 	=> esc_html__( 'Imanifest Main Menu', 'imanifest' ),
-			'footer-menu' 	=> esc_html__( 'Imanifest Footer Menu', 'imanifest' ),
+			'primary-menu' => esc_html__( 'Primary Menu', 'imanifest' ),
+			'dashboard-menu' => esc_html__( 'Dashboard Menu', 'imanifest' ),
 		)
 	);
-	
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -139,42 +138,44 @@ add_action( 'widgets_init', 'imanifest_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function imanifest_scripts(){
-    // Enqueue font-awesome.css from the theme's css folder
+function imanifest_scripts() {
+	wp_enqueue_style( 'imanifest-style', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
+	wp_enqueue_style( 'responsive-style', get_template_directory_uri() . '/assets/css/responsive.css', array(), _S_VERSION );
+	wp_enqueue_style( 'dashboard-style', get_template_directory_uri() . '/assets/css/dashboard-layout.css', array(), _S_VERSION );
+	wp_enqueue_style( 'dashboardr-style', get_template_directory_uri() . '/assets/css/dashboard-responsive.css', array(), _S_VERSION );
+	wp_enqueue_style( 'sidemenu-style', get_template_directory_uri() . '/assets/plugins/sidebar/BootSideMenu.css', array(), _S_VERSION );
+	wp_enqueue_style( 'normalize-style', get_template_directory_uri() . '/assets/vendor/normalize-css/normalize.css', array(), _S_VERSION );
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/vendor/bootstrap-5.3.0/css/bootstrap.css', array(), _S_VERSION );
+	wp_enqueue_style( 'bootstrapicon-style', get_template_directory_uri() . '/assets/vendor/bootstrap-icons-1.10.3/bootstrap-icons.css', array(), _S_VERSION );
+	wp_enqueue_style( 'boxicons-style', '//cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'googlefonts-style', '//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto&display=swap', array(), _S_VERSION );
+	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'imanifest-style', 'rtl', 'replace' );
 
-	/* Theme Core */
-    wp_enqueue_style('normalize', get_template_directory_uri().'/assets/vendor/normalize-css/normalize.css');
-    wp_enqueue_style('responsive', get_template_directory_uri().'/assets/css/responsive.css');
-    wp_enqueue_style('like', get_template_directory_uri().'/assets/css/dashboard-layout.css');
-    wp_enqueue_style('layout', get_template_directory_uri().'/assets/css/dashboard-responsive.css');
-    wp_enqueue_style('bootstrap', get_template_directory_uri().'/assets/vendor/bootstrap-5.3.0/css/bootstrap.css');
-    wp_enqueue_style('bootstrap-icons', get_template_directory_uri().'/assets/vendor/bootstrap-icons-1.10.3/bootstrap-icons.css');
-    wp_enqueue_style('boxicons', '//cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css');
-    wp_enqueue_style('swiper', '//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
+	// Load files only dashboard page
+	if (is_page_template('page-templates/dashboard.php')) {
+		wp_enqueue_style( 'swiper-style', '//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), _S_VERSION );
+		wp_enqueue_script( 'swiper-script', '//cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js', array('jquery'), _S_VERSION, true );
+	}
 
-	// Google Font 
-    wp_enqueue_style('googleapis', '//fonts.googleapis.com');
-    wp_enqueue_style('gstatic', '//fonts.gstatic.com');
-    wp_enqueue_style('googleeapis', '//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto&display=swap');
-    wp_enqueue_style('style', get_template_directory_uri().'/assets/css/style.css');
-	
-    
-    // Enqueue the main stylesheet of the theme
-    wp_enqueue_style('stylesheet', get_stylesheet_uri());
+	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/vendor/bootstrap-5.3.0/js/bootstrap.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'sidebar-script', get_template_directory_uri() . '/assets/plugins/sidebar/respn-sidebar.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/js/theme.js', array('jquery'), _S_VERSION, true );
+	wp_localize_script('theme-script', 'imenifest_ajax_objects', array(
+		'ajaxurl'      => admin_url('admin-ajax.php'),
+		'confirmText'  => esc_html__('Are your sure?', 'imenifest'),
+	));
+	// Load files only journals page
+	if (is_page_template('page-templates/journals.php')) {
+		wp_enqueue_script( 'journals-script', get_template_directory_uri() . '/assets/js/dashboard/journals.js', array('jquery'), _S_VERSION, true );
+	}
 
-    // Enqueue jQuery
-    wp_enqueue_script('jquery');
-    
-    // Enqueue bootstrap.min.js from the theme's js folder
-    wp_enqueue_script('bootstrap',get_template_directory_uri().'/assets/vendor/bootstrap-5.3.0/js/bootstrap.js');
-    wp_enqueue_script('swiper-min','//cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js');
-	wp_enqueue_script('jquery-min','//ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js');
-	wp_enqueue_script('main',get_template_directory_uri().'/assets/js/main.js');
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
-
-// Add the koncept_css_js_file function to the 'wp_enqueue_scripts' action hook
-add_action('wp_enqueue_scripts','imanifest_scripts');
-
+add_action( 'wp_enqueue_scripts', 'imanifest_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -190,6 +191,19 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/inc/hooks.php';
+require get_template_directory() . '/inc/ajax.php';
+
+
+/**
+ * Nav Walker which enhance the theme Nav by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/nav-walker.php';
+
+/**
+ * initialize functions which enhance the theme Nav by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/init.php';
 
 /**
  * Customizer additions.
@@ -202,6 +216,7 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
 
 
 /*
@@ -263,3 +278,4 @@ register_post_type('books',array(
 		'menu_icon'		=> 'dashicons-text-page',
 		'supports'		=>array('title','author','thumbnail','editor')
 		));  
+
