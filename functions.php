@@ -213,6 +213,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
+
+
 // Register All Books
 
 register_post_type('books',array(
