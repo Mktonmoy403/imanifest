@@ -1,25 +1,28 @@
 <?php
-/*
-* The template for displaying 404 page (not found)
-*/ 
-get_header(); ?>
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ *
+ * @package iManifest
+ */
 
-  <section id="body_area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 error_page">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/404/404.jpg" alt="">
-            <!-- <p>404 Error - Page not Found</p>
-            <h1>Oops! Looks Like something was wrong</h1> -->
-            <div class="error_search">
-                <?php get_search_form(); ?>
-            </div>
-            <a href="<?php echo home_url(); ?>" class="homepage"> Go back Homepage</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <?php get_footer(); ?>
-
-
+ get_header();
+ ?>
+ 
+	 <div id="primary" class="container text-center" style="min-height: 80vh;display:flex;align-items:center;justify-content:center;">
+ 
+		 <section class="error-404 not-found">
+			 <header class="page-header">
+				 <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'tqnsolar' ); ?></h1>
+			 </header><!-- .page-header -->
+ 
+			 <div class="page-content">
+				 <p><?php esc_html_e( 'It looks like nothing was found at this location.', 'tqnsolar' ); ?></p>
+			 </div><!-- .page-content -->
+		 </section><!-- .error-404 -->
+ 
+	 </div><!-- #main -->
+ 
+ <?php
+ get_footer();

@@ -1,0 +1,64 @@
+/* 
+
+    Responsive Code Will Appear Here
+
+*/
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 640px) {
+}
+@media (max-width: 767.98px) {
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkout-billing-form {
+    width: 85%;
+  }
+
+  .checkout-details-section {
+    width: 85%;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  /* checkout page start  */
+  .checkbox-head {
+    margin-left: 8%;
+  }
+  .checkout-billing-form {
+    width: 558px;
+  }
+
+  .checkout-details-section {
+    width: 306px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1536px) {
+  /* checkout page start  */
+  .checkout-section {
+    margin: 0 auto;
+    max-width: 1180px;
+  }
+
+  .checkout-billing-form {
+    width: 558px;
+  }
+
+  .checkout-details-section {
+    width: 386px;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1536px) {
+}
