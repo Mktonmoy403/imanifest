@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package imanifest
+ * @package iManifest
  */
 
 /**
@@ -35,3 +35,4 @@ function imanifest_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'imanifest_pingback_header' );
+

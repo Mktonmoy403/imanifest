@@ -1,0 +1,214 @@
+/* 
+
+    Responsive Code Will Appear Here
+
+*/
+
+/* For Extra Small Device to 320px Device */
+@media only screen and (max-width: 319.5px) {
+
+    /* checkout page start  */
+    .checkout-billing-form.shadow-sm {
+        margin-bottom: 30px;
+    }
+
+    .checkbox-head {
+        margin-left: 13%;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-billing-form {
+        width: 85%;
+    }
+
+    .checkout-details-section {
+        width: 85%;
+    }
+
+    /* checkout page end  */
+    
+}
+
+/* For Smartphone */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+    /* === Landing - Checkout :: Start === */
+
+    .checkout-body {
+        background-color: rgb(250, 252, 255);
+        height: 100%;
+        width: 100%;
+        padding: 49px 0px;
+    }
+
+    .checkout-billing-form.shadow-sm {
+        margin-bottom: 30px;
+    }
+
+    .checkbox-head {
+        /* margin-left: 13%; */
+        text-align: center;
+        padding: 0;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-billing-form {
+        width: 85%;
+    }
+
+    .checkout-details-section {
+        width: 85%;
+    }
+
+    .checkout-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+    }
+    /* === Landing - Checkout :: End === */
+
+}
+
+/* For Small Size Tab */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    /* === Landing - Checkout :: Start === */
+    .checkout-billing-form.shadow-sm {
+        margin-bottom: 30px;
+    }
+
+    .checkbox-head {
+        margin-left: 13%;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-billing-form {
+        width: 85%;
+    }
+
+    .checkout-details-section {
+        width: 85%;
+    }
+    /* === Landing - Checkout :: End === */
+}
+
+/* For Big and Average Size Tab */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    .checkout-body {
+        background-color: rgb(250, 252, 255);
+        height: 100%;
+        width: 100%;
+        padding: 49px 0px;
+    }
+    .checkout-details-section {
+        width: 100%;
+        margin-top: 30px;
+    }
+    /* checkout page start  */
+  
+
+    .checkout-billing-form {
+        width: 100%;
+    }
+
+    .checkbox-head {
+        margin-left: 3%;
+        padding: 0px 15px;
+    }
+    
+    
+    
+    /* checkout page end  */
+    .checkout-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+}
+
+/* for Tab and Laptop Medium Size Screen */
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+
+
+
+    /* check out start  */
+    .checkbox-head {
+        margin-left: 8%;
+    }
+
+    .checkout-billing-form {
+        width: 558px;
+    }
+
+    .checkout-details-section {
+        width: 306px;
+    }
+
+    /* checkout end  */
+
+
+}
+
+/* for Medium Size Laptop and Full Size Laptop */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+.checkout-body {
+    height: 100%;
+}
+    /* checkout page start  */
+    .checkout-details-section {
+        width: 355px;
+    }
+
+    .checkbox-head {
+        margin-left: 6%;
+    }
+
+    .checkout-billing-form {
+        width: 558px;
+    }
+
+    /* checkout page end  */
+
+
+}
+
+/* For Big Size Screen More than 1200px */
+
+@media only screen and (min-width: 1200px) and (max-width: 1360px) {
+    
+    .checkout-body {
+        height: 100%;
+    }
+
+    .checkbox-head {
+        padding: 0px 22px;
+    }
+
+    .checkout-billing-form {
+        width: 650px !important;
+    }
+}

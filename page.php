@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package imanifest
+ * @package iManifest
  */
 
 get_header();
@@ -36,7 +36,3 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
-
-
-
-
