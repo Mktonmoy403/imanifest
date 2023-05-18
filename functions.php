@@ -217,3 +217,65 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+/*
+
+** imanifest register post type start
+
+*/
+
+
+
+
+
+
+// Register All Books
+
+register_post_type('books',array(
+	'public'		=>true,
+	'labels'		=>array(
+		'name'						=>'Books',
+		'add_new'					=>'Add New Book',
+		'add_items'					=>'All Books',
+		'add_new_item'				=>'Add New Books',
+		'featured_image'			=>'Books Image',
+		'set_featured_image'		=>'Add Book Image',
+		'remove_featured_image'		=>'Remove Book Image'
+		),
+	'menu_icon'		=> 'dashicons-book',
+	'supports'		=>array('title','author','thumbnail','editor')
+	));
+
+	// Register Journal 
+	register_post_type('journal',array(
+		'public'		=>true,
+		'labels'		=>array(
+			'name'						=>'Journal',
+			'add_new'					=>'Add New Journal',
+			'add_items'					=>'All Journal',
+			'add_new_item'				=>'Add New Journal',
+			'featured_image'			=>'Journal Image',
+			'set_featured_image'		=>'Add Journal Image',
+			'remove_featured_image'		=>'Remove Journal Image'
+			),
+		'menu_icon'		=> 'dashicons-welcome-write-blog',
+		'supports'		=>array('title','author','thumbnail','editor')
+		));   
+		
+	// Register Guides 
+	register_post_type('guides',array(
+		'public'		=>true,
+		'labels'		=>array(
+			'name'						=>'Guides',
+			'add_new'					=>'Add New Guides',
+			'add_items'					=>'All Guides',
+			'add_new_item'				=>'Add New Guides',
+			'featured_image'			=>'Guides Image',
+			'set_featured_image'		=>'Add Guides Image',
+			'remove_featured_image'		=>'Remove Guides Image'
+			),
+		'menu_icon'		=> 'dashicons-text-page',
+		'supports'		=>array('title','author','thumbnail','editor')
+		));  
+
